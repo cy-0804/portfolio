@@ -2676,15 +2676,13 @@
       font-size: 1.4rem;
     }
 
-    /* Local Video Carousel Layout */
+
     /* Carousel Container */
     .carousel-container {
       position: relative;
       width: 100%;
       max-width: 900px;
-      /* Constrain max width to keep arrows close */
       margin: 0 auto;
-      /* Center the container */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2703,7 +2701,6 @@
       justify-content: center;
       cursor: pointer;
       z-index: 20;
-      /* Higher than active video card */
       transition: all 0.3s ease;
       position: absolute;
     }
@@ -2730,15 +2727,12 @@
       gap: 1.5rem;
       margin: 2rem auto 0;
       width: 100%;
-      /* REMOVED max-width: 380px to allow full track carousel */
       padding-bottom: 1rem;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      /* scroll-behavior: smooth; REMOVED because JS handles smooth scroll and we need instant jump */
       align-items: center;
       padding-left: calc(50% - 175px);
-      /* Center the first item initially (350px/2 = 175) */
       padding-right: calc(50% - 175px);
     }
 
@@ -2748,12 +2742,9 @@
 
     .video-card {
       height: 600px;
-      /* Keep large height */
-      /* Fixed width ~350px (Reel ratio) instead of flex:1 */
       min-width: 350px;
       width: 350px;
       flex: 0 0 auto;
-      /* Allow multiple items on track */
       scroll-snap-align: center;
       background: rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2763,14 +2754,12 @@
       justify-content: center;
       align-items: center;
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, filter 0.4s ease;
-      /* Default state: Unfocused */
       transform: scale(0.9);
       opacity: 0.6;
       filter: brightness(0.6) blur(0px);
     }
 
     .video-card.active {
-      /* Active state: Focused */
       transform: scale(1.05);
       opacity: 1;
       filter: brightness(1) blur(0);
@@ -2779,7 +2768,6 @@
     }
 
     .video-card:hover {
-      /* Hover shouldn't interact with focus scale logic to avoid jumping */
       filter: brightness(0.8);
     }
 
@@ -2798,7 +2786,6 @@
     @media (max-width: 768px) {
       .video-card {
         height: 500px;
-        /* Slightly smaller on mobile */
         min-width: 300px;
         width: 300px;
       }

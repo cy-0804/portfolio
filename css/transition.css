@@ -14,29 +14,18 @@
     flex: 1;
     height: 100%;
     transform: scaleY(0);
-    /* Default: content visible */
     transform-origin: top;
     transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-    /* Delay set via inline CSS var --i */
     transition-delay: calc(var(--i) * 0.03s);
 }
 
-/* Color Palette - Dark Purple Series assigned via Nth-child if JS doesn't inline styles, 
-   BUT JS will inline specific colors as requested. 
-   We keep base styles here. 
-*/
 
-/* Active State: COVERS the screen */
+/* Active State */
 .transition-overlay.is-active .transition-bar {
     transform: scaleY(1);
     transform-origin: bottom;
 }
 
-/* When removing active, we want it to shrink up */
-/* By default it shrinks to top because default origin is top. 
-   So simply removing .is-active triggers the reveal animation. */
-
 body {
-    /* No opacity fade needed anymore, curtains handle it */
     opacity: 1;
 }
