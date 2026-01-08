@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Illustration Page">
+    <meta name="keywords" content="illustration, art, digital art">
+    <meta name="author" content="CY">
+    <link rel="icon" href="img/CY.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transition.css">
+    <link rel="stylesheet" href="css/illustration.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <title>Illustration - CY</title>
+</head>
+
+<body>
+
+    <div class="blob-container"></div>
+
+    <!-- Navigation -->
+    <!-- Header -->
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="illustration.html" class="active">ILLUSTRATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="mobile-social">
+                <a href="https://www.linkedin.com/in/ang-cha-yan-177012258" aria-label="LinkedIn Profile"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/cy-0804" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/chayan.0804/" aria-label="Facebook Profile"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/cy_1000_100/" aria-label="Instagram Profile"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <div class="header-social">
+            <a href="https://www.linkedin.com/in/ang-cha-yan-177012258" aria-label="LinkedIn Profile"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/cy-0804" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/chayan.0804/" aria-label="Facebook Profile"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/cy_1000_100/" aria-label="Instagram Profile"><i
+                    class="fa-brands fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <div class="hamburger" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <!-- Illustration Section -->
+    <section class="works">
+        <div class="works-content animate-on-scroll">
+            <div class="illustration-header animate-on-scroll">
+                <div class="illus-header-image">
+                    <img src="img/illustration.png" alt="Illustration Icon">
+                </div>
+                <div class="illus-header-text">
+                    <h2 class="pop-title">
+                        <span class="pop-letter" data-text="I" style="--delay: 0.1s">I</span>
+                        <span class="pop-letter" data-text="l" style="--delay: 0.15s">l</span>
+                        <span class="pop-letter" data-text="l" style="--delay: 0.2s">l</span>
+                        <span class="pop-letter" data-text="u" style="--delay: 0.25s">u</span>
+                        <span class="pop-letter" data-text="s" style="--delay: 0.3s">s</span>
+                        <span class="pop-letter" data-text="t" style="--delay: 0.35s">t</span>
+                        <span class="pop-letter" data-text="r" style="--delay: 0.4s">r</span>
+                        <span class="pop-letter" data-text="a" style="--delay: 0.45s">a</span>
+                        <span class="pop-letter" data-text="t" style="--delay: 0.5s">t</span>
+                        <span class="pop-letter" data-text="i" style="--delay: 0.55s">i</span>
+                        <span class="pop-letter" data-text="o" style="--delay: 0.6s">o</span>
+                        <span class="pop-letter" data-text="n" style="--delay: 0.65s">n</span>
+                    </h2>
+                    <p class="fade-desc">A collection of my digital art and visual storytelling.</p>
+                </div>
+            </div>
+
+            <!-- Illustration Gallery Section -->
+            <div class="gallery-section animate-on-scroll">
+                <h3 class="section-title">Gallery</h3>
+
+                <!-- Glass Wrapper -->
+                <div class="gallery-glass-container">
+                    <!-- Tab Navigation -->
+                    <div class="tabs-container">
+                        <button class="tab-btn active" data-tab="all">All</button>
+                        <button class="tab-btn" data-tab="stick-figure">Stick Figure</button>
+                        <button class="tab-btn" data-tab="sketch">Sketch</button>
+                        <button class="tab-btn" data-tab="illustration">Illustration</button>
+                    </div>
+
+                    <!-- Masonry Grid -->
+                    <div class="masonry-grid">
+                        <!-- Stick Figures -->
+                        <div class="gallery-item" data-category="stick-figure">
+                            <img src="img/stickfigure1.avif" alt="Stick Figure 1" loading="lazy">
+                            <div class="gallery-overlay"><span>Stick Art 1</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="stick-figure">
+                            <img src="img/stickfigure2.avif" alt="Stick Figure 2" loading="lazy">
+                            <div class="gallery-overlay"><span>Stick Art 2</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="stick-figure">
+                            <img src="img/stickfigure3.avif" alt="Stick Figure 3" loading="lazy">
+                            <div class="gallery-overlay"><span>Stick Art 3</span></div>
+                        </div>
+
+                        <!-- Sketches -->
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch1.avif" alt="Sketch 1" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 1</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch2.avif" alt="Sketch 2" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 2</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch3.avif" alt="Sketch 3" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 3</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch4.avif" alt="Sketch 4" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 4</span></div>
+                        </div>
+
+                        <!-- Illustrations -->
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration1.jpg" alt="Illustration 1" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 1</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration2.jpg" alt="Illustration 2" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 2</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration3.jpg" alt="Illustration 3" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 3</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration4.png" alt="Illustration 4" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 4</span></div>
+                        </div>
+
+                        <!-- New Sketches -->
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch%205.png" alt="Sketch 5" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 5</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="sketch">
+                            <img src="img/sketch%206.jpg" alt="Sketch 6" loading="lazy">
+                            <div class="gallery-overlay"><span>Sketch 6</span></div>
+                        </div>
+
+                        <!-- New Illustrations -->
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%205.png" alt="Illustration 5" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 5</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%206.png" alt="Illustration 6" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 6</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%207.png" alt="Illustration 7" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 7</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%208.png" alt="Illustration 8" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 8</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%209.png" alt="Illustration 9" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 9</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%2010.png" alt="Illustration 10" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 10</span></div>
+                        </div>
+                        <div class="gallery-item" data-category="illustration">
+                            <img src="img/illustration%2012.jpg" alt="Illustration 12" loading="lazy">
+                            <div class="gallery-overlay"><span>Illustration 12</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tools I Used Section -->
+            <div class="tools-section animate-on-scroll">
+                <div class="tools-container">
+                    <div class="tools-text">
+                        <h3>Tools I Used</h3>
+                    </div>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <img src="img/photoshop.png" alt="Adobe Photoshop">
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="img/easy-paint-tool-sai-logo-icon-10.png" alt="Paint Tool SAI">
+                            <span>SAI</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="img/procreate-logo-icon-hd.png" alt="Procreate">
+                            <span>Procreate</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="img/clip-studio-paint-app-icon-hd.png" alt="Clip Studio Paint">
+                            <span>Clip Studio</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="img/illustrator.png" alt="Adobe Illustrator">
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="img/krita-seeklogo.png" alt="Krita">
+                            <span>Krita</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drawing Process Section -->
+            <div class="process-section animate-on-scroll">
+                <h3 class="section-title">Drawing Process</h3>
+                <div class="process-card featured-card">
+                    <div class="video-wrapper">
+                        <video controls muted loop playsinline preload="none" class="lazy-video">
+                            <source src="img/process%20video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Vertical Videos Grid -->
+                <div class="process-grid-vertical">
+                    <!-- Video Card 1 -->
+                    <div class="process-card">
+                        <div class="video-wrapper">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/process%20video%201.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                    </div>
+                    <!-- Video Card 2 -->
+                    <div class="process-card">
+                        <div class="video-wrapper">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/process%20video%202.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 CY Portfolio. All rights reserved.</p>
+        <div class="footer-credits">
+            <a href="https://www.flaticon.com/free-stickers/student" title="student stickers" target="_blank">Student
+                stickers (Flaticon)</a>
+            <a href="https://www.flaticon.com/free-stickers/creativity" title="creativity stickers"
+                target="_blank">Creativity stickers (Flaticon)</a>
+            <a href="https://www.flaticon.com/free-stickers/study" title="study stickers" target="_blank">Study stickers
+                (Flaticon)</a>
+            <a href="https://www.flaticon.com/free-icons/graphic-design" title="graphic design icons"
+                target="_blank">Graphic design icons (Flaticon)</a>
+            <a href="https://pnghdpro.com/clip-studio-paint-app-icon/" title="Clip Studio Paint Icon"
+                target="_blank">CSP Icon</a>
+            <a href="https://pnghdpro.com/procreate-logo-icon/" title="Procreate Logo Icon" target="_blank">Procreate
+                Icon</a>
+            <a href="https://seeklogo.com/vector-logo/510258/krita" title="Krita Logo" target="_blank">Krita Logo</a>
+        </div>
+    </footer>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/transition.js"></script>
+    <script src="js/blob.js"></script>
+    <script src="js/mobile menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/video-autoplay.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>

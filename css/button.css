@@ -1,0 +1,47 @@
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.5px;
+
+
+    text-shadow: none;
+    position: relative;
+    overflow: hidden;
+
+
+    width: max-content;
+}
+
+.btn-contact i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    text-shadow: none;
+}
+
+.btn-contact:hover i {
+    transform: translate(2px, -2px);
+}
+
+.btn-contact:active {
+    transform: translateY(0);
+}

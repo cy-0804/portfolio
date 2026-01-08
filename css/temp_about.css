@@ -1,0 +1,110 @@
+/* --- Qualities Section --- */
+.qualities-section {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    width: 100%;
+}
+
+.qualities-section h3 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+}
+
+.qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Scannable chunks */
+    gap: 2rem;
+    justify-content: center;
+}
+
+.quality-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.quality-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    border-color: #c084fc;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.quality-card i {
+    font-size: 3rem;
+    color: #c084fc;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.quality-card:hover i {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px #c084fc;
+}
+
+.quality-card h4 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+}
+
+.quality-card p {
+    font-size: 1.4rem;
+    color: #d1d5db;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* --- Philosophy Section --- */
+.philosophy-section {
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.philosophy-section h3 {
+    font-size: 2.5rem;
+    color: #c084fc;
+    margin-bottom: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.philosophy-section blockquote {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    line-height: 1.5;
+    font-style: italic;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.philosophy-section .accent {
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+    font-weight: 500;
+}
