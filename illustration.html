@@ -243,36 +243,47 @@
             <div class="process-section animate-on-scroll">
                 <h3 class="section-title">Drawing Process</h3>
 
-                <!-- Instagram Reels Grid -->
-                <div class="instagram-grid">
-                    <!-- Reel 1 -->
-                    <div class="instagram-card">
-                        <blockquote class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/reel/CuymhhWrXvC/"
-                            data-instgrm-version="14"></blockquote>
-                    </div>
-                    <!-- Reel 2 -->
-                    <div class="instagram-card">
-                        <blockquote class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/reel/CrkrWtuv9qI/"
-                            data-instgrm-version="14"></blockquote>
-                    </div>
-                    <!-- Reel 3 -->
-                    <div class="instagram-card">
-                        <blockquote class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/reel/CUSlO8tFU9N/"
-                            data-instgrm-version="14"></blockquote>
-                    </div>
-                    <!-- Reel 4 -->
-                    <div class="instagram-card">
-                        <blockquote class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/reel/CT86DO2lSQO/"
-                            data-instgrm-version="14"></blockquote>
-                    </div>
-                </div>
+                <!-- Local Video Process Grid -->
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
 
-                <!-- Instagram Embed Script -->
-                <script async src="//www.instagram.com/embed.js"></script>
+                    <div class="video-grid">
+                        <!-- Video 1 -->
+                        <div class="video-card">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/Drawing%20Process%20Video%201.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="video-card">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/Drawing%20Process%20Video%202.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="video-card">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/Drawing%20Process%20Video%203.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="video-card">
+                            <video controls muted loop playsinline preload="none" class="lazy-video">
+                                <source src="img/Drawing%20Process%20Video%204.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -313,6 +324,7 @@
     <script src="js/tabs.js"></script>
     <script src="js/video-autoplay.js"></script>
     <script src="js/lightbox.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>

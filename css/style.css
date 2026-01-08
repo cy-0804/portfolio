@@ -2676,57 +2676,144 @@
       font-size: 1.4rem;
     }
 
-    /* Instagram Grid Layout */
-    .instagram-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      /* Enforce 4 columns (Horizontal List) */
-      gap: 1rem;
-      margin-top: 2rem;
+    /* Local Video Carousel Layout */
+    /* Carousel Container */
+    .carousel-container {
+      position: relative;
       width: 100%;
-      align-items: stretch;
-      /* Ensure all items are same height */
+      max-width: 900px;
+      /* Constrain max width to keep arrows close */
+      margin: 0 auto;
+      /* Center the container */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .instagram-card {
-      background: rgba(255, 255, 255, 0.03);
+    /* Navigation Buttons */
+    .carousel-btn {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 20;
+      /* Higher than active video card */
+      transition: all 0.3s ease;
+      position: absolute;
+    }
+
+    .carousel-btn:hover {
+      background: #c084fc;
+      transform: scale(1.1);
+    }
+
+    .carousel-btn.prev {
+      left: 50px;
+      /* Overlay inside */
+    }
+
+    .carousel-btn.next {
+      right: 50px;
+      /* Overlay inside */
+    }
+
+    /* Local Video Carousel Layout */
+    .video-grid {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      margin: 2rem auto 0;
+      width: 100%;
+      /* REMOVED max-width: 380px to allow full track carousel */
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* scroll-behavior: smooth; REMOVED because JS handles smooth scroll and we need instant jump */
+      align-items: center;
+      padding-left: calc(50% - 175px);
+      /* Center the first item initially (350px/2 = 175) */
+      padding-right: calc(50% - 175px);
+    }
+
+    .video-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .video-card {
+      height: 600px;
+      /* Keep large height */
+      /* Fixed width ~350px (Reel ratio) instead of flex:1 */
+      min-width: 350px;
+      width: 350px;
+      flex: 0 0 auto;
+      /* Allow multiple items on track */
+      scroll-snap-align: center;
+      background: rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
-      /* Stack content */
-      justify-content: flex-start;
-      /* Align to top */
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, filter 0.4s ease;
+      /* Default state: Unfocused */
+      transform: scale(0.9);
+      opacity: 0.6;
+      filter: brightness(0.6) blur(0px);
+    }
+
+    .video-card.active {
+      /* Active state: Focused */
+      transform: scale(1.05);
+      opacity: 1;
+      filter: brightness(1) blur(0);
+      z-index: 10;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-card:hover {
+      /* Hover shouldn't interact with focus scale logic to avoid jumping */
+      filter: brightness(0.8);
+    }
+
+    .video-card.active:hover {
+      filter: brightness(1.1);
+    }
+
+    .video-card video {
       height: 100%;
-      /* Fill the grid cell */
-      padding: 0;
-    }
-
-    .instagram-card blockquote {
-      width: 100% !important;
-      margin: 0 !important;
-      border: none !important;
-      border-radius: 12px !important;
-    }
-
-    /* Override standard embed max-width to ensure it fills card */
-    .instagram-media {
-      min-width: unset !important;
-      width: 100% !important;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      .instagram-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* 2 columns on mobile */
-        gap: 1rem;
+      .video-card {
+        height: 500px;
+        /* Slightly smaller on mobile */
+        min-width: 300px;
+        width: 300px;
       }
-    }
 
-    @media (max-width: 480px) {
-      .instagram-grid {
-        grid-template-columns: 1fr;
-        /* 1 column on very small screens */
+      .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+      }
+
+      .carousel-btn.prev {
+        left: 10px;
+      }
+
+      .carousel-btn.next {
+        right: 10px;
       }
     }
