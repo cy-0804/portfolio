@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Ang Cha Yan</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #6d28d9;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f9fafb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-left h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: right;
+        }
+
+        .contact-info a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--accent);
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item,
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2rem;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .item-date {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .item-subtitle {
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(109, 40, 217, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>Ang Cha Yan</h1>
+            <h2>Software Development Student & UI/UX Design Enthusiast</h2>
+            <p style="max-width: 500px; font-size: 0.95rem; color: #555; margin-top: 1rem;">
+                A passionate Bachelor of Computer Science student at UTeM with a strong foundation in programming and
+                digital design.
+                Dedicated to creating user-friendly, efficient applications by bridging complex logic with intuitive
+                design.
+                Detail-oriented, creative, and committed to continuous learning in software development.
+            </p>
+        </div>
+        <div class="contact-info">
+            <a href="mailto:acy970805@gmail.com"><i class="fas fa-envelope"></i> acy970805@gmail.com</a>
+            <a href="https://www.linkedin.com/in/ang-cha-yan-177012258/"><i class="fab fa-linkedin"></i> LinkedIn
+                Profile</a>
+            <a href="https://github.com/cy-0804"><i class="fab fa-github"></i> github.com/cy-0804</a>
+            <div><i class="fas fa-location-dot"></i> No 65, Jalan 2, Taman Sri Tanjong, Tanjong Karang, Selangor</div>
+            <div><i class="fas fa-calendar"></i> 2003/8/4 (22 years old)</div>
+        </div>
+    </header>
+
+    <section>
+        <h3>Education</h3>
+
+        <div class="education-item">
+            <div class="item-header">
+                <div class="item-title">Universiti Teknikal Malaysia Melaka (UTeM)</div>
+                <div class="item-date">2023 – Present</div>
+            </div>
+            <div class="item-subtitle">Bachelor of Computer Science (Software Development)</div>
+            <div class="item-desc">Current CGPA: 3.84</div>
+            <div class="item-desc">Focus: Programming fundamentals, Data structures, System analysis.</div>
+        </div>
+
+        <div class="education-item">
+            <div class="item-header">
+                <div class="item-title">Kolej Tingkatan Enam Tunku Abdul Rahman Putra (KiSTARP)</div>
+                <div class="item-date">2021 – 2023</div>
+            </div>
+            <div class="item-subtitle">STPM</div>
+            <div class="item-desc">CGPA: 4.0</div>
+            <div class="item-desc">Subjects: ICT, Business Studies, General Studies, Visual Art.</div>
+        </div>
+
+        <div class="education-item">
+            <div class="item-header">
+                <div class="item-title">SMJK Yoke Kuan</div>
+                <div class="item-date">2016 – 2020</div>
+            </div>
+            <div class="item-subtitle">SPM</div>
+            <div class="item-desc">Result: 5As</div>
+            <div class="item-desc">Stream: Science Stream</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">C++ / C</div>
+            <div class="skill-tag">Kotlin</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">React</div>
+            <div class="skill-tag">Flutter</div>
+            <div class="skill-tag">HTML / CSS</div>
+            <div class="skill-tag">SQL</div>
+            <div class="skill-tag">Firebase</div>
+            <div class="skill-tag">Figma</div>
+            <div class="skill-tag">UI/UX Design</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Projects</h3>
+
+        <div class="project-item">
+            <div class="item-header">
+                <div class="item-title">Supermarket Management System</div>
+            </div>
+            <div class="item-desc">A comprehensive system for managing supermarket inventory, sales, and staff. Built to
+                optimize daily operations.</div>
+        </div>
+
+        <div class="project-item">
+            <div class="item-header">
+                <div class="item-title">Airline Reservation System</div>
+            </div>
+            <div class="item-desc">An application designed for booking and managing flight reservations and storing
+                passenger details securely.</div>
+        </div>
+
+        <div class="project-item">
+            <div class="item-header">
+                <div class="item-title">Bus Ticket Management System</div>
+            </div>
+            <div class="item-desc">Streamlines bus ticketing processes including scheduling, route management, and
+                ticket issuance.</div>
+        </div>
+
+        <div class="project-item">
+            <div class="item-header">
+                <div class="item-title">Fruit Classifier (Machine Learning)</div>
+            </div>
+            <div class="item-desc">Developed a machine learning model capable of accurately classifying different types
+                of fruits from images.</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Certifications</h3>
+        <div class="education-item">
+            <div class="item-header">
+                <div class="item-title">Oracle Academy - Database Foundation</div>
+            </div>
+        </div>
+    </section>
+
+    <button class="print-btn no-print" onclick="window.print()">
+        <i class="fas fa-print"></i> Save as PDF
+    </button>
+
+</body>
+
+</html>
