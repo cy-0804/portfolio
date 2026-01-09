@@ -30,12 +30,93 @@ document.addEventListener('DOMContentLoaded', () => {
         return clone;
     });
 
+    // --- VIDEO CONTROLS LOGIC ---
+    const setupVideoControls = (card) => {
+        const video = card.querySelector('video');
+        const playOverlay = card.querySelector('.video-overlay');
+        const fullscreenBtn = card.querySelector('.fullscreen-btn');
+        const progressBar = card.querySelector('.progress-bar');
+        const progressFill = card.querySelector('.progress-fill');
+
+        if (!video) return;
+
+        // Play on Hover (Desktop preferred interaction)
+        card.addEventListener('mouseenter', () => {
+            video.play().catch(e => console.log('Autoplay blocked:', e));
+            card.classList.remove('paused');
+            if (playOverlay) playOverlay.style.opacity = '0';
+        });
+
+        // Pause on Leave
+        card.addEventListener('mouseleave', () => {
+            // Only pause if not in fullscreen mode (optional, but good UX)
+            if (!document.fullscreenElement) {
+                video.pause();
+                card.classList.add('paused');
+                if (playOverlay) playOverlay.style.opacity = '1';
+            }
+        });
+
+        // Update Progress Bar
+        if (progressFill) {
+            video.addEventListener('timeupdate', () => {
+                if (video.duration) {
+                    const percent = (video.currentTime / video.duration) * 100;
+                    progressFill.style.width = `${percent}%`;
+                }
+            });
+        }
+
+        // Seek on Click (Progress Bar)
+        if (progressBar) {
+            progressBar.addEventListener('click', (e) => {
+                e.stopPropagation(); // Don't match card click if any
+                const rect = progressBar.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                if (video.duration) {
+                    video.currentTime = pos * video.duration;
+                }
+            });
+        }
+
+        // Initialize state
+        card.classList.add('paused'); // Start paused logic
+
+        // Fullscreen Logic
+        if (fullscreenBtn) {
+            fullscreenBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Don't trigger play/pause
+
+                if (!document.fullscreenElement) {
+                    if (card.requestFullscreen) {
+                        card.requestFullscreen();
+                    } else if (card.webkitRequestFullscreen) { /* Safari */
+                        card.webkitRequestFullscreen();
+                    } else if (card.msRequestFullscreen) { /* IE11 */
+                        card.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    }
+                }
+            });
+        }
+    };
+
+    // Apply to originals
+    originalCards.forEach(card => setupVideoControls(card));
+
     // Append/Prepend clones and initialize them
     [...firstClones, ...lastClones].forEach(clone => {
         // Ensure clones are ready to play
-        clone.querySelector('video').preload = 'metadata';
-        clone.querySelector('video').muted = true;
-        clone.querySelector('video').loop = true;
+        const vid = clone.querySelector('video');
+        if (vid) {
+            vid.preload = 'metadata';
+            vid.muted = true;
+            vid.loop = true;
+        }
+        setupVideoControls(clone);
     });
 
     firstClones.forEach(clone => track.appendChild(clone));
